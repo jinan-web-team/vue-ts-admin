@@ -5,6 +5,8 @@
   "scripts": {
     "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve --mode development",
+    "start": "npm run serve",
+    "dev": "npm run serve",
     "build": "vue-cli-service build --mode production"
   },
   "dependencies": {
