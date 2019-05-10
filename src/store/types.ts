@@ -1,5 +1,7 @@
-export const APPROUTER = 'APPROUTER';
+export const APPROUTER: string = 'APPROUTER';
 
 // fullScreen
+export const SETSCREEN: string = 'SETSCREEN';
 
-export const SETSCREEN = 'SETSCREEN';
+// User
+export const LOGIN: string = 'LOGIN';

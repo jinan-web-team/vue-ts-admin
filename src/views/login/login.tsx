@@ -1,9 +1,15 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { Form } from 'ant-design-vue';
 import moment from 'moment';
+import {  namespace } from 'vuex-class';
 import './login.less';
+import {AxiosResponse} from 'axios';
+import {IResponse} from '@/plugins/axios';
+import {ILoginResponseData} from '@/api/user';
 
-interface IUserForm {
+const userModule = namespace('user');
+
+export interface IUserForm {
   userName: string;
   password: string;
   code?: string;
@@ -16,14 +22,10 @@ interface IUserForm {
   },
 })
 class Login extends Vue {
-  private loginModel: IUserForm = {
-    userName: '',
-    password: '',
-    code: '',
-  };
   private loading: boolean = false;
   private time: string = '';
   private timeInterval: number = -1;
+  @userModule.Action private sendLogin!: (params: IUserForm) => Promise<AxiosResponse<IResponse<ILoginResponseData>>>;
 
   protected render() {
     const { getFieldDecorator } = this.Form;
@@ -32,15 +34,9 @@ class Login extends Vue {
       <div class="web-login">
         <div class="web-login--layer web-login--layer-area">
           <ul class="web-circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            {
+              new Array(10).fill(false).map((item, idx) => <li key={idx}>{ item }</li>)
+            }
           </ul>
         </div>
         <div
@@ -91,9 +87,11 @@ class Login extends Vue {
                             { required: true, message: '请输入密码' },
                           ],
                         })(<a-input
+                          autocomplete="off"
                           id="password"
                           type="password"
                           placeholder="请输入密码"
+                          on-pressEnter="handleSubmit"
                         >
                           <a-icon
                             slot="addonAfter"
@@ -172,8 +170,12 @@ class Login extends Vue {
     e.preventDefault();
     this.Form.validateFields((err: boolean, values: IUserForm) => {
       if (!err) {
-        console.log(values);
         this.loading = true;
+        this.sendLogin(values).then((res) => {
+          console.log(res);
+        }).catch((e) => {
+          this.loading = false;
+        });
       }
     });
   }

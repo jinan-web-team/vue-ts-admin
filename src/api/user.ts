@@ -1,5 +1,5 @@
-import request from '@/plugins/axios';
-
+import {AxiosResponse} from 'axios';
+import request, {IResponse} from '@/plugins/axios';
 
 export function getUserPermissionInfo() {
   return request({
@@ -8,10 +8,19 @@ export function getUserPermissionInfo() {
   });
 }
 
-export function authLogin(data: { username: string, password: string }) {
-  return request({
-    url: '/auth/login',
-    method: 'post',
-    data,
-  });
+interface ILoginParams {
+  userName: string;
+  password: string;
+  code?: string;
+}
+
+export interface ILoginResponseData {
+  username: string;
+  token: string;
+  exp: number;
+  permission: string[] | string | boolean;
+}
+
+export async function authlogin(params: ILoginParams): Promise<AxiosResponse<IResponse<ILoginResponseData>>>  {
+    return await request.post<IResponse<ILoginResponseData>>('/auth/login', { data: params });
 }

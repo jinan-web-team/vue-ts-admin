@@ -4,6 +4,16 @@ import axios, {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
 import { message } from 'ant-design-vue';
 import log from '@/libs/log';
 
+export interface IResponse<T = any> {
+  msg: string;
+  resultCode?: number;
+  desc: string;
+  success: boolean;
+  status?: number;
+  rows: T;
+}
+
+
 // 记录和显示错误
 function errorLog(err: { message: string } ): void {
   store.dispatch('error/addLog', {
@@ -35,6 +45,8 @@ httpRequest.interceptors.request.use((config: AxiosRequestConfig) => {
     const token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNTU2NjA1Nzg3LCJleHAiOjE1NTcyMTA1ODd9.5UEEUXBsmqg8cdBppmYu9Iscsq7T4IpxVXBJoZFol30';
     if (token && token !== 'undefined') {
       config.headers.Authorization = `bearer ${token}`;
+    } else {
+      delete config.headers.Authorization;
     }
   }
   return config;
