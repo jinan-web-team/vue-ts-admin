@@ -1,0 +1,67 @@
+{
+  "name": "admin-ts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build --mode production"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^1.1.16",
+    "ant-design-vue": "^1.2.4",
+    "axios": "^0.18.0",
+    "better-scroll": "^1.15.2",
+    "core-js": "^2.6.5",
+    "flex.css": "^1.1.7",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.11",
+    "matchit": "^1.0.8",
+    "memoize-one": "^5.0.4",
+    "moment": "^2.24.0",
+    "nprogress": "^0.2.0",
+    "ua-parser-js": "^0.7.19",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@types/better-scroll": "^1.12.1",
+    "@types/js-cookie": "^2.2.2",
+    "@types/lodash": "^4.14.123",
+    "@types/memoize-one": "^4.1.1",
+    "@types/nprogress": "0.0.29",
+    "@types/ua-parser-js": "^0.7.33",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-typescript": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
+    "babel-plugin-import": "^1.11.0",
+    "compression-webpack-plugin": "^2.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.5",
+    "mockjs": "^1.0.1-beta3",
+    "screenfull": "^4.2.0",
+    "typescript": "^3.4.3",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "vue-cli-plugin-ant-design": "^1.0.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

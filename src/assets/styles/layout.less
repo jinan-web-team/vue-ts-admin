@@ -1,0 +1,25 @@
+@import "public";
+
+.@{prefix}-layout {
+  &:extend(.full);
+  .@{prefix}-header {
+    padding: 0;
+  }
+  .@{prefix}-logo {
+    box-sizing: border-box;
+    width: 220px;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 0 0 1px #1890ff;
+  }
+  .@{prefix}-sider {
+    position: relative;
+    overflow: hidden;
+    .@{prefix}-menu {
+      &:extend(.full);
+    }
+  }
+  .@{prefix}-footer {
+    text-align: center;
+  }
+}
