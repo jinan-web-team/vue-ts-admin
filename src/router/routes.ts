@@ -9,7 +9,7 @@ const frameOut: IRouteItem[] & RouteConfig[] = [
   {
     path: '/login',
     name: 'login',
-    component: () => import(/* webpackChunkName: 'login' */'@/views/login/login.vue'),
+    component: () => import(/* webpackChunkName: 'login' */'@/views/login/login.tsx'),
   },
 ];
 
