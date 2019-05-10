@@ -1,29 +1,27 @@
 # admin-ts 基于vue、ant-design、ts的后台管理系统
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发环境运行
 ```
-npm run serve
+npm run serve / npm start / npm run dev
 ```
 
-### Compiles and minifies for production
+### 生产环境
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
 
 ### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Lints and fixes files
+```
+npm run lint --fix
+```
