@@ -32,9 +32,15 @@ class Login extends Vue {
       <div class="web-login">
         <div class="web-login--layer web-login--layer-area">
           <ul class="web-circles">
-            {
-              arr.map((num: number, index: number) => this.renderLi)
-            }
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
         <div
@@ -104,6 +110,7 @@ class Login extends Vue {
                     </a-form-item>
                     <a-form-item>
                       <a-button
+                        loading={ this.loading }
                         block
                         type="primary"
                         html-type="submit"
@@ -166,6 +173,7 @@ class Login extends Vue {
     this.Form.validateFields((err: boolean, values: IUserForm) => {
       if (!err) {
         console.log(values);
+        this.loading = true;
       }
     });
   }
