@@ -1,4 +1,4 @@
-# admin-ts
+# admin-ts 基于vue、ant-design、ts的后台管理系统
 
 ## Project setup
 ```
