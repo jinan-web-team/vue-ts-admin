@@ -21,7 +21,7 @@ npm run build
 npm run lint
 ```
 
-### Lints and fixes files fix
+### Lints and fixes files fix -
 ```
 npm run lint --fix
 ```
