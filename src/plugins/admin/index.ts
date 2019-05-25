@@ -33,10 +33,8 @@ export default {
     Vue.use(pluginLog);
     Vue.use(pluginError);
     Vue.use(pluginOpen);
-
     // 注册过滤器
     Object.keys(filters).forEach((key: string) => {
-      // @ts-ignore
       Vue.filter(key, filters[ key ]);
     });
   },
