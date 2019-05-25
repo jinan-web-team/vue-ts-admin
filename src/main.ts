@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import App from './App';
 import router from './router';
 import store from './store';
-import webAdmin from '@/plugins';
+import webAdmin from '@/plugins/admin';
+import App from '@/App';
 
 Vue.use(webAdmin);
 Vue.config.productionTip = false;
