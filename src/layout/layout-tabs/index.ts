@@ -1,3 +1,3 @@
-import LayoutTabs from './layout-tabs.vue';
+const LayoutTabs = require('./layout-tabs.vue');
 
 export default LayoutTabs;

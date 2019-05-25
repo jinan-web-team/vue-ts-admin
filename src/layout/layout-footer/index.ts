@@ -1,3 +1,2 @@
-import LayoutFooter from './layout-footer.vue';
-
+const LayoutFooter = require('./layout-footer.vue');
 export default LayoutFooter;

@@ -26,7 +26,7 @@ const frameIn: IRouteItem[] & RouteConfig[] = [
         meta: {
           hidden: false,
         },
-        component: () => import(/* webpackChunkName: 'index' */ '@/views/index/index.vue'),
+        component: require('@/views/Index/Index.vue'),
       },
     ],
   },
@@ -65,12 +65,12 @@ const errorPage: IRouteItem[] & RouteConfig[] = [
   {
     path: '/error401',
     name: 'error401',
-    component: () => import(/* webpackChunkName: "error401" */ '../views/error/error401.vue'),
+    component: require('@/views/error/error401.vue'),
   },
   {
     path: '*',
     name: 'error404',
-    component: () => import(/* webpackChunkName: "error404" */ '../views/error/error404.vue'),
+    component: require('@/views/error/error404.vue'),
   },
 ];
 

@@ -5,7 +5,6 @@ import webAdmin from '@/plugins/admin';
 import App from '@/App';
 
 Vue.use(webAdmin);
-Vue.config.productionTip = false;
 
 new Vue({
   router,
@@ -14,6 +13,6 @@ new Vue({
   async mounted() {
     this.$store.commit('releases/getVersion');
     this.$store.commit('ua/get');
-    this.$store.dispatch('fullscreen/listen');
+    this.$store.dispatch('fullScreen/watchScreen');
   },
 }).$mount('#app');

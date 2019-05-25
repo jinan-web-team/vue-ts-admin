@@ -1,3 +1,3 @@
-import LayoutHeader from './layout-header.vue';
+const LayoutHeader = require('./layout-header.vue');
 
 export default LayoutHeader;

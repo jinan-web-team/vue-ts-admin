@@ -7,6 +7,7 @@ import user from './modules/user';
 import ua from './modules/ua';
 
 Vue.use(Vuex);
+console.log(fullScreen);
 
 export default new Vuex.Store({
   state: {},

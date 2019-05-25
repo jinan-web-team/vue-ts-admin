@@ -1,3 +1,3 @@
-import HeaderUser from './header-user.vue';
+const HeaderUser = require('./header-user.vue');
 
 export default HeaderUser;
