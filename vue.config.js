@@ -18,6 +18,7 @@ module.exports = {
     loaderOptions: {
       less: {
         javascriptEnabled: true,
+        data: `@import '~@/assets/style/public.less';`,
       },
     },
   },

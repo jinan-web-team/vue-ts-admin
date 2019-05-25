@@ -3,7 +3,7 @@ import { VueConstructor } from 'vue';
 // ant-vue
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
-import '../../assets/styles/antd-variables.less';
+import '../../assets/styles/antd/antd-variables.less';
 
 // components
 import '@/components';

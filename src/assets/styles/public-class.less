@@ -1,6 +1,7 @@
 @import "public";
 // mixin等内容请在 public.less 里面书写
 @import './base.less';
+@import './animate/transition';
 
 // 文本居中
 .@{prefix}-text-center {
@@ -13,6 +14,7 @@
   display: table;
   content: "";
 }
+
 .@{prefix}-clearfix:after {
   clear: both
 }
@@ -21,19 +23,48 @@
 .@{prefix}-fl {
   float: left;
 }
+
 .@{prefix}-fr {
   float: right;
 }
 
 
-.@{prefix}-m { margin: 16px !important; }
-.@{prefix}-mt { margin-top: 16px !important; }
-.@{prefix}-mr { margin-right: 16px !important; }
-.@{prefix}-mb { margin-bottom: 16px !important; }
-.@{prefix}-ml { margin-left: 16px !important; }
+.@{prefix}-m {
+  margin: 16px !important;
+}
 
-.@{prefix}-p { padding: 16px !important; }
-.@{prefix}-pt { padding-top: 16px !important; }
-.@{prefix}-pr { padding-right: 16px !important; }
-.@{prefix}-pb { padding-bottom: 16px !important; }
-.@{prefix}-pl { padding-left: 16px !important; }
+.@{prefix}-mt {
+  margin-top: 16px !important;
+}
+
+.@{prefix}-mr {
+  margin-right: 16px !important;
+}
+
+.@{prefix}-mb {
+  margin-bottom: 16px !important;
+}
+
+.@{prefix}-ml {
+  margin-left: 16px !important;
+}
+
+.@{prefix}-p {
+  padding: 16px !important;
+}
+
+.@{prefix}-pt {
+  padding-top: 16px !important;
+}
+
+.@{prefix}-pr {
+  padding-right: 16px !important;
+}
+
+.@{prefix}-pb {
+  padding-bottom: 16px !important;
+}
+
+.@{prefix}-pl {
+  padding-left: 16px !important;
+}
