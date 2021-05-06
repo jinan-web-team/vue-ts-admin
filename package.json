@@ -22,7 +22,7 @@
     "memoize-one": "^5.0.4",
     "moment": "^2.24.0",
     "nprogress": "^0.2.0",
-    "ua-parser-js": "^0.7.19",
+    "ua-parser-js": "^0.7.24",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
