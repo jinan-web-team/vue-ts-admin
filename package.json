@@ -20,7 +20,7 @@
     "lodash": "^4.17.11",
     "matchit": "^1.0.8",
     "memoize-one": "^5.0.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "nprogress": "^0.2.0",
     "ua-parser-js": "^0.7.19",
     "vue": "^2.6.10",
