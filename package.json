@@ -45,7 +45,7 @@
     "compression-webpack-plugin": "^2.0.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "lint-staged": "^8.1.5",
+    "lint-staged": "^13.1.0",
     "mockjs": "^1.0.1-beta3",
     "screenfull": "^4.2.0",
     "typescript": "^3.4.3",
