@@ -40,7 +40,7 @@
     "@types/ua-parser-js": "^0.7.33",
     "@vue/cli-plugin-babel": "^3.6.0",
     "@vue/cli-plugin-typescript": "^3.6.0",
-    "@vue/cli-service": "^3.6.0",
+    "@vue/cli-service": "^5.0.8",
     "babel-plugin-import": "^1.11.0",
     "compression-webpack-plugin": "^2.0.0",
     "less": "^3.0.4",
